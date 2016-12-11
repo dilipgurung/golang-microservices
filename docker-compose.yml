@@ -1,0 +1,18 @@
+---
+version: '2'
+
+services: 
+
+  www:
+    build: ./services/www
+    ports: 
+      - "8000:8000"
+  # api:
+  #   build: ./services/api
+  #   ports:
+  #     - "8080:8080"
+  #   links:
+  #     - rate
+  # rate:
+  #   build: ./services/rate
+
