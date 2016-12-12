@@ -1,16 +1,22 @@
 .PHONY: pb build test deps
 
 pb:
-	n pb/**/*.proto; do \
+	for f in pb/**/*.proto; do \
 		protoc --go_out=plugins=grpc:. $$f; \
 		echo compiled: $$f; \
 	done
 
 deps:
-	go get
+	go get ./...
 
-build:
-	./bin/build.sh
+test: 
+	go test ./...
+
+build: deps test
+	@./bin/build.sh
+
+clean:
+	@./bin/clean.sh
 
 up:
 	docker-compose build

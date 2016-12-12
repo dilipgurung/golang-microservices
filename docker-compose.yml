@@ -1,4 +1,3 @@
----
 version: '2'
 
 services: 
@@ -7,12 +6,12 @@ services:
     build: ./services/www
     ports: 
       - "8000:8000"
-  # api:
-  #   build: ./services/api
-  #   ports:
-  #     - "8080:8080"
-  #   links:
-  #     - rate
-  # rate:
-  #   build: ./services/rate
+  api:
+    build: ./services/api
+    ports:
+      - "9000:9000"
+    links:
+      - rate
+  rate:
+    build: ./services/rate
 

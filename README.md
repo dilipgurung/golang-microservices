@@ -2,9 +2,7 @@
 
 ### Pre-requisites
 
-Docker 
-
-    https://docs.docker.com/engine/installation
+Docker https://docs.docker.com/engine/installation
 
 Protobuf v3
 
@@ -16,11 +14,11 @@ Protoc-gen libraries:
 
 Clone the repository:
 
-    $ git clone git@github.com:harlow/golang-microservices.git
+    $ git clone git@github.com:dilipgurung/golang-microservices.git
 
 ### Protobufs
 
-If changes are made to the Protocol Buffer files use the Makefile to regenerate:
+To regenerate Protocol Buffer files, run:
 
     $ make pb
 
@@ -34,7 +32,7 @@ If changes are made to the Protocol Buffer files use the Makefile to regenerate:
 
 Visit the web page in the browser:
 
-    [http://localhost:8000](http://localhost:8000/)
+[http://localhost:8000](http://localhost:8000/)
 
 ### Stop the application
 
